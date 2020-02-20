@@ -1,0 +1,26 @@
+Useradd and Password:
+
+-> useradd user_name
+-> passwd user_name
+
+   Full User add cmd:
+   -> useradd -u 2000 -g test1 -G test2,test1 -c "Administrator file for RHCSA" -s /bin/bash -d /opt/rhcsa -e 2018-08-28 -p rhcsa@123 rhcsa
+
+To change user name:
+  -> usermog -l new_name old_name
+  
+-----------------------------------
+
+To give permissions of a folder to other user:
+
+-> getfacl -m u:user_name:rwx folder_name
+To view the permissions
+-> setfacl folder_name
+
+** Replicating the permissions of one folder to another folder
+   -> getfacl --access one_folder | setfacl -d -M- other_folder
+
+** Replicating the permissions of one file to another file
+   -> getfacl one_file | setfacl --set-file=- other_file
+
+
