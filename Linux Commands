@@ -23,4 +23,13 @@ To view the permissions
 ** Replicating the permissions of one file to another file
    -> getfacl one_file | setfacl --set-file=- other_file
 
+--------------------------------------------------------------
+
+To find exact path of the any file/folder/application/cmd 
+   -> whereis file/folder/application/cmd_name
+To know short description of any file/folder/application/cmd 
+   -> whatis file/folder/application/cmd_name
+   
+
+
 
